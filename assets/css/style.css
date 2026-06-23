@@ -4143,3 +4143,140 @@ html[dir="rtl"] .auth-controls-wrapper {
     right: auto;
     left: 1.25rem;
 }
+
+/* ============================================================
+   ERROR PAGE & COMING SOON PAGE
+   ============================================================ */
+.error-page-wrapper, .coming-soon-wrapper {
+    min-height: calc(100vh - var(--header-height) - 400px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1.5rem;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.error-card, .coming-soon-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 4rem 3rem;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.error-icon, .coming-soon-icon {
+    font-size: 4rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.error-title, .coming-soon-title {
+    font-size: 2rem;
+    font-weight: var(--weight-h2);
+    margin-bottom: 1rem;
+}
+
+.error-desc, .coming-soon-desc {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.error-actions, .coming-soon-actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Coming Soon Countdown & Newsletter styling */
+.coming-soon-countdown {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.countdown-item {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    min-width: 80px;
+    padding: 1.25rem 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.countdown-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.countdown-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    display: block;
+    line-height: 1.1;
+}
+
+.countdown-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.coming-soon-newsletter {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2.5rem;
+}
+
+.coming-soon-newsletter h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon-newsletter p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
