@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Portal Account | Envit Agency</title>
+    <meta name="description"
+        content="Register for a Client Portal account with Envit Environmental consulting to request and track environmental surveys and mitigation projects.">
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
+</head>
+
+<body class="auth-body">
+
+    <!-- Theme and RTL Controls outside the Card (Not Fixed) -->
+    <div class="auth-controls-wrapper">
+        <button class="control-btn" id="theme-toggle-btn" title="Toggle Theme"
+            style="width: 36px; height: 36px; font-size: 0.95rem;"><i class="fas fa-moon"></i></button>
+        <button class="control-btn" id="rtl-toggle-btn" title="Toggle RTL"
+            style="width: 36px; height: 36px; font-size: 0.95rem;"><i class="fas fa-exchange-alt"></i></button>
+    </div>
+
+    <!-- Main Auth Area (No Fixed Header or Footer) -->
+    <main class="auth-main">
+        <div class="auth-card fade-in appear" style="position: relative;">
+
+
+
+            <!-- Website Logo Centered inside the Box -->
+            <div class="auth-logo-wrapper"
+                style="display: flex; justify-content: center; margin-bottom: 2rem; padding-top: 1rem;">
+                <a href="index.html" class="logo" id="auth-logo" style="pointer-events: auto;">
+                    <div class="logo-icon" style="background-color: var(--color-primary); color: #ffffff;"><i
+                            class="fas fa-leaf"></i></div>
+                    <div class="logo-text" style="color: var(--text-primary);">ENVIT<span
+                            style="color: var(--color-primary); font-weight: 700;">AGENCY</span></div>
+                </a>
+            </div>
+
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Register to manage assessments and site compliance</p>
+            </div>
+
+            <form class="auth-form" id="portal-signup-form">
+                <div class="form-group">
+                    <label class="form-label" for="signup-name">Full Name *</label>
+                    <input type="text" id="signup-name" class="form-input" placeholder="e.g. Jane Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="signup-email">Email Address *</label>
+                    <input type="email" id="signup-email" class="form-input" placeholder="name@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="signup-password">Password *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="signup-password" class="form-input" placeholder="••••••••" required>
+                        <button type="button" class="password-toggle-btn" id="pass-reveal-1"
+                            aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="signup-confirm-password">Confirm Password *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="signup-confirm-password" class="form-input" placeholder="••••••••"
+                            required>
+                        <button type="button" class="password-toggle-btn" id="pass-reveal-2"
+                            aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1rem;">
+                    <input type="checkbox" id="terms-agree"
+                        style="margin-top: 0.25rem; accent-color: var(--color-primary); width: 16px; height: 16px;"
+                        required>
+                    <label for="terms-agree" style="font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;">
+                        I agree to the Envit Portal Terms of Service & Privacy Guidelines.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-btn-submit" id="signup-submit-btn"
+                    style="width: 100%;">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+
+            <div class="auth-divider">or register with</div>
+
+            <div class="auth-social-group">
+                <button class="auth-btn-social google" type="button" id="signup-google">
+                    <i class="fab fa-google"></i> Sign Up with Google
+                </button>
+                <button class="auth-btn-social facebook" type="button" id="signup-facebook">
+                    <i class="fab fa-facebook-f"></i> Sign Up with Facebook
+                </button>
+                <button class="auth-btn-social apple" type="button" id="signup-apple">
+                    <i class="fab fa-apple"></i> Sign Up with Apple
+                </button>
+            </div>
+
+            <p class="auth-footer-text">
+                Already have an account? <a href="login.html">Login</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Password toggles
+        const passReveal1 = document.getElementById('pass-reveal-1');
+        const signupPass = document.getElementById('signup-password');
+        if (passReveal1 && signupPass) {
+            passReveal1.addEventListener('click', () => {
+                const isHidden = signupPass.type === 'password';
+                signupPass.type = isHidden ? 'text' : 'password';
+                passReveal1.innerHTML = isHidden ? '<i class="fas fa-eye-slash"></i>' : '<i class="fas fa-eye"></i>';
+            });
+        }
+
+        const passReveal2 = document.getElementById('pass-reveal-2');
+        const signupConfirmPass = document.getElementById('signup-confirm-password');
+        if (passReveal2 && signupConfirmPass) {
+            passReveal2.addEventListener('click', () => {
+                const isHidden = signupConfirmPass.type === 'password';
+                signupConfirmPass.type = isHidden ? 'text' : 'password';
+                passReveal2.innerHTML = isHidden ? '<i class="fas fa-eye-slash"></i>' : '<i class="fas fa-eye"></i>';
+            });
+        }
+
+        // Form submit simulation
+        const signupForm = document.getElementById('portal-signup-form');
+        if (signupForm) {
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (signupPass.value !== signupConfirmPass.value) {
+                    alert('Error: Password fields do not match.');
+                    return;
+                }
+
+                const submitBtn = document.getElementById('signup-submit-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Registering...';
+
+                setTimeout(() => {
+                    alert('Registration successful (simulation). Redirecting to portal dashboard...');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 1500);
+            });
+        }
+
+        // Social registration simulations
+        document.getElementById('signup-google')?.addEventListener('click', () => alert('Google registration simulation.'));
+        document.getElementById('signup-facebook')?.addEventListener('click', () => alert('Facebook registration simulation.'));
+        document.getElementById('signup-apple')?.addEventListener('click', () => alert('Apple registration simulation.'));
+    </script>
+</body>
+
+</html>

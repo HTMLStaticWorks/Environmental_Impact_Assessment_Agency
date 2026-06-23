@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Projects & Case Studies | Envit Agency</title>
+    <meta name="description"
+        content="View Envit's portfolio of successfully approved projects across construction, mining, infrastructure, renewable energy, and heavy industrial sectors.">
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header id="main-header">
+        <div class="header-container container">
+            <a href="index.html" class="logo" id="header-logo">
+                <div class="logo-icon" style="background-color: var(--color-primary); color: #ffffff;"><i
+                        class="fas fa-leaf"></i></div>
+                <div class="logo-text" style="color: var(--text-primary);">ENVIT<span>AGENCY</span></div>
+            </a>
+
+            <nav class="nav-menu" id="primary-navigation">
+                <!-- Desktop Home Dropdown (hidden on mobile/tablet <= 1024px) -->
+                <div class="nav-dropdown desktop-only-home">
+                    <button class="nav-link nav-dropdown-toggle" id="home-menu-btn" aria-haspopup="true"
+                        aria-expanded="false">
+                        Home <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                    </button>
+                    <div class="nav-dropdown-menu" aria-labelledby="home-menu-btn">
+                        <a href="index.html" class="nav-dropdown-item">Home 1 (Nature)</a>
+                        <a href="home-2.html" class="nav-dropdown-item">Home 2 (Compliance)</a>
+                    </div>
+                </div>
+                <!-- Mobile Home Links (hidden on desktop > 1024px) -->
+                <a href="index.html" class="nav-link mobile-only-home">Home 1</a>
+                <a href="home-2.html" class="nav-link mobile-only-home">Home 2</a>
+
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="methodology.html" class="nav-link">EIA Methodology</a>
+                <a href="sectors.html" class="nav-link">Sectors</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <!-- Mobile Theme/RTL Controls (hidden on desktop > 1024px) -->
+                <div class="mobile-nav-controls">
+                    <button class="control-btn nav-control-btn mobile-theme-btn" title="Toggle Theme"><i
+                            class="fas fa-moon"></i></button>
+                    <button class="control-btn nav-control-btn mobile-rtl-btn" title="Toggle RTL"><i
+                            class="fas fa-exchange-alt"></i></button>
+                </div>
+
+                <!-- Sign Up inside mobile menu (after icons) -->
+                <a href="signup.html" class="btn btn-primary nav-menu-signup" id="nav-menu-signup-btn">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="control-btn nav-control-btn" id="theme-toggle-btn" title="Toggle Theme"><i
+                        class="fas fa-moon"></i></button>
+                <button class="control-btn nav-control-btn" id="rtl-toggle-btn" title="Toggle RTL"><i
+                        class="fas fa-exchange-alt"></i></button>
+                <a href="signup.html" class="btn btn-primary btn-sm" id="nav-signup-btn">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner contact-page-banner">
+        <div class="container page-banner-content">
+            <h1>Featured Agency Projects</h1>
+            <p>Explore our portfolio of successfully approved projects across diverse industrial sectors.<br>We deliver precise environmental impact assessments that ensure full regulatory compliance.</p>
+        </div>
+    </section>
+
+    <!-- Project Grid & Portfolio Section -->
+    <section class="project-portfolio" id="portfolio-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Case Studies</span>
+                <h2 class="section-title">A Proven Record of Environmental Clearances</h2>
+                <p class="section-subtitle">Browse through our environmental assessments, audit protocols, and
+                    mitigation plans that earned developer approvals.</p>
+            </div>
+
+            <!-- Portfolio Category Filter Tabs -->
+            <div class="portfolio-filter fade-in" id="portfolio-filter-buttons">
+                <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+                <button class="filter-btn" data-filter="construction" id="filter-construction">Construction</button>
+                <button class="filter-btn" data-filter="mining" id="filter-mining">Mining</button>
+                <button class="filter-btn" data-filter="infrastructure"
+                    id="filter-infrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="energy" id="filter-energy">Renewable Energy</button>
+                <button class="filter-btn" data-filter="industrial" id="filter-industrial">Industrial</button>
+            </div>
+
+            <!-- Portfolio Grid (Centered Odd Wrapping) -->
+            <div class="project-portfolio-grid fade-in" id="project-grid-container">
+                <!-- Project 1 (Renewable Energy) -->
+                <article class="project-card" data-category="energy">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project1.jpg" alt="Sierra Wind Farm Assessment" class="project-img">
+                        <span class="card-tag">Renewable Energy</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-card-location"><i class="fas fa-map-marker-alt"></i> California, USA</span>
+                        <h3 class="project-card-title"><a href="project-details.html">Sierra Nevada Wind Infrastructure
+                                Assessment</a></h3>
+                        <p class="card-text">Comprehensive EIA for a 200MW wind generator field, detailing migratory
+                            bird protection measures, soil retention plans, and acoustic dispersion grids.</p>
+                        <div class="project-details-mini">
+                            <span><strong>Location</strong>California</span>
+                            <span><strong>Status</strong>Approved</span>
+                            <span><strong>Scope</strong>Full EIA</span>
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-1">Read Full Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 2 (Mining) -->
+                <article class="project-card" data-category="mining">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project2.jpg" alt="Pilbara Copper Mine hydrogeological mapping"
+                            class="project-img">
+                        <span class="card-tag">Mining</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-card-location"><i class="fas fa-map-marker-alt"></i> Western
+                            Australia</span>
+                        <h3 class="project-card-title"><a href="project-details.html">Pilbara Iron Ore Excavation
+                                EIA</a></h3>
+                        <p class="card-text">Deep hydrogeological mapping and biodiversity baseline surveys to protect
+                            subterranean aquifers and fragile desert ecosystems during mining development.</p>
+                        <div class="project-details-mini">
+                            <span><strong>Location</strong>Australia</span>
+                            <span><strong>Status</strong>Approved</span>
+                            <span><strong>Scope</strong>Water & Soils</span>
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-2">Read Full Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 3 (Infrastructure) -->
+                <article class="project-card" data-category="infrastructure">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project3.jpg" alt="Eco-friendly bridge/infrastructure project"
+                            class="project-img">
+                        <span class="card-tag">Infrastructure</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-card-location"><i class="fas fa-map-marker-alt"></i> Bavaria,
+                            Germany</span>
+                        <h3 class="project-card-title"><a href="project-details.html">Bavarian Forest Infrastructure
+                                Alignment</a></h3>
+                        <p class="card-text">Designing wildlife wildlife-crossings and acoustic dampers for a major
+                            transit corridor to minimize biological blockages and sound pollution.</p>
+                        <div class="project-details-mini">
+                            <span><strong>Location</strong>Germany</span>
+                            <span><strong>Status</strong>Completed</span>
+                            <span><strong>Scope</strong>Wildlife Path</span>
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-3">Read Full Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 4 (Construction) -->
+                <article class="project-card" data-category="construction">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project4.jpg" alt="High density building construction"
+                            class="project-img">
+                        <span class="card-tag">Construction</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-card-location"><i class="fas fa-map-marker-alt"></i> Seattle, WA,
+                            USA</span>
+                        <h3 class="project-card-title"><a href="project-details.html">Puget Sound Urban Center
+                                Delineation</a></h3>
+                        <p class="card-text">Wetland delineation and biological runoff mapping for a massive smart city
+                            high-density development project. Managed soil erosion planning loops.</p>
+                        <div class="project-details-mini">
+                            <span><strong>Location</strong>Seattle</span>
+                            <span><strong>Status</strong>Approved</span>
+                            <span><strong>Scope</strong>Wetlands</span>
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-4">Read Full Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 5 (Industrial) -->
+                <article class="project-card" data-category="industrial">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project5.jpg" alt="Chemical processing industrial site"
+                            class="project-img">
+                        <span class="card-tag">Industrial</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-card-location"><i class="fas fa-map-marker-alt"></i> Houston, TX,
+                            USA</span>
+                        <h3 class="project-card-title"><a href="project-details.html">Gulf Coast Chemical Stack
+                                AERMOD</a></h3>
+                        <p class="card-text">Structuring stack dispersion mapping using AERMOD software to evaluate
+                            chemical processing chimney emissions across municipal boundary lines.</p>
+                        <div class="project-details-mini">
+                            <span><strong>Location</strong>Texas</span>
+                            <span><strong>Status</strong>Approved</span>
+                            <span><strong>Scope</strong>Air Quality</span>
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-5">Read Full Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 6 (Construction) -->
+                <article class="project-card" data-category="construction">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project6.jpg" alt="Canopy preservation in green construction site"
+                            class="project-img">
+                        <span class="card-tag">Construction</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="project-card-location"><i class="fas fa-map-marker-alt"></i> Portland, OR,
+                            USA</span>
+                        <h3 class="project-card-title"><a href="project-details.html">Portland Canopy Preservation
+                                Project</a></h3>
+                        <p class="card-text">Strategic Environmental Assessment tracking tree preservation codes and
+                            drainage requirements for a municipal housing expansion grid.</p>
+                        <div class="project-details-mini">
+                            <span><strong>Location</strong>Oregon</span>
+                            <span><strong>Status</strong>Completed</span>
+                            <span><strong>Scope</strong>SEA & Trees</span>
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-6">Read Full Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Aggregate Metrics Section -->
+    <section class="projects-metrics" id="projects-metrics">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Aggregate Results</span>
+                <h2 class="section-title">Environmental Impact in Numbers</h2>
+                <p class="section-subtitle">Tracking the cumulative conservation outcomes achieved across our
+                    successfully approved industrial projects.</p>
+            </div>
+
+            <div class="metrics-grid fade-in">
+                <div class="metric-item">
+                    <div><i class="fas fa-tree"></i></div>
+                    <div class="metric-val">12K+</div>
+                    <p>Hectares Forest Preserved</p>
+                </div>
+                <div class="metric-item">
+                    <div><i class="fas fa-tint"></i></div>
+                    <div class="metric-val">1.8M</div>
+                    <p>Gallons Run-off Filtered</p>
+                </div>
+                <div class="metric-item">
+                    <div><i class="fas fa-feather-alt"></i></div>
+                    <div class="metric-val">150+</div>
+                    <p>Critical Species Mapped</p>
+                </div>
+                <div class="metric-item">
+                    <div><i class="fas fa-stamp"></i></div>
+                    <div class="metric-val">450+</div>
+                    <p>State Permits Secured</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Submission Guide Section -->
+    <section class="projects-guide" id="projects-guide">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Submission Checklist</span>
+                <h2 class="section-title">How to Submit Your Project Scopes</h2>
+                <p class="section-subtitle">We follow a direct digital intake process to expedite regulatory timeline
+                    evaluations for new sites.</p>
+            </div>
+
+            <div class="methodology-flow fade-in">
+                <div class="methodology-step">
+                    <div class="step-number">01</div>
+                    <h4>Upload Specifications</h4>
+                    <p>Register in our portal and upload GIS coordinates, site architectural maps, and CAD outlines.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">02</div>
+                    <h4>Technical Review</h4>
+                    <p>Our environmental engineers evaluate local ordinances and soil maps within 48 hours.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">03</div>
+                    <h4>Intake Proposal</h4>
+                    <p>We send a detailed field audit schedule and baseline scoping proposal to kickstart operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;" id="footer-logo">
+                        <div class="logo-icon" style="background-color: var(--color-primary); color: #ffffff;"><i
+                                class="fas fa-leaf"></i></div>
+                        <div class="logo-text" style="color: #ffffff;">ENVIT<span>AGENCY</span></div>
+                    </a>
+                    <p style="margin-top: 1rem;">Providing scientific assessments, biodiversity audits, and
+                        environmental planning tools to assist global builders in maintaining legal and ecological
+                        balance.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-widget">
+                    <h4>Core Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Environmental Impact Assessment</a></li>
+                        <li><a href="services.html">Environmental Due Diligence</a></li>
+                        <li><a href="services.html">Mining Site Assessment</a></li>
+                        <li><a href="services.html">Construction Compliance</a></li>
+                        <li><a href="services.html">Air Quality & Water Surveys</a></li>
+                        <li><a href="services.html">Biodiversity Audits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4>Sectors Served</h4>
+                    <ul class="footer-links">
+                        <li><a href="sectors.html">Property & Construction</a></li>
+                        <li><a href="sectors.html">Mining & Resource Extraction</a></li>
+                        <li><a href="sectors.html">Infrastructure & Highways</a></li>
+                        <li><a href="sectors.html">Renewable Wind & Solar</a></li>
+                        <li><a href="sectors.html">Industrial Facilities</a></li>
+                        <li><a href="sectors.html">Government Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4>HQ Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>404 Green Canopy Ave, Suite 100, Seattle, WA 98101, USA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+1 (800) 555-ENVIT (3684)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>assessment@envit-agency.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Environmental Impact Assessment Agency (Envit). All rights reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top-btn" class="scroll-top-btn" title="Scroll to Top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

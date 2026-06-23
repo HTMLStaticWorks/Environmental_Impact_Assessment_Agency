@@ -1,1 +1,704 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact Assessment Agency | Envit Consulting</title>
+    <meta name="description"
+        content="Leading environmental consulting firm providing comprehensive Environmental Impact Assessments, regulatory compliance, and sustainability services for sustainable project development.">
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header id="main-header">
+        <div class="header-container container">
+            <a href="index.html" class="logo" id="header-logo">
+                <div class="logo-icon" style="background-color: var(--color-primary); color: #ffffff;"><i
+                        class="fas fa-leaf"></i></div>
+                <div class="logo-text">ENVIT<span>AGENCY</span></div>
+            </a>
+
+            <nav class="nav-menu" id="primary-navigation">
+                <!-- Desktop Home Dropdown (hidden on mobile/tablet <= 1024px) -->
+                <div class="nav-dropdown desktop-only-home">
+                    <button class="nav-link nav-dropdown-toggle active" id="home-menu-btn" aria-haspopup="true"
+                        aria-expanded="false">
+                        Home <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                    </button>
+                    <div class="nav-dropdown-menu" aria-labelledby="home-menu-btn">
+                        <a href="index.html" class="nav-dropdown-item active">Home 1 (Nature)</a>
+                        <a href="home-2.html" class="nav-dropdown-item">Home 2 (Compliance)</a>
+                    </div>
+                </div>
+                <!-- Mobile Home Links (hidden on desktop > 1024px) -->
+                <a href="index.html" class="nav-link mobile-only-home active">Home 1</a>
+                <a href="home-2.html" class="nav-link mobile-only-home">Home 2</a>
+
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="methodology.html" class="nav-link">EIA Methodology</a>
+                <a href="sectors.html" class="nav-link">Sectors</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <!-- Mobile Theme/RTL Controls (hidden on desktop > 1024px) -->
+                <div class="mobile-nav-controls">
+                    <button class="control-btn nav-control-btn mobile-theme-btn" title="Toggle Theme"><i
+                            class="fas fa-moon"></i></button>
+                    <button class="control-btn nav-control-btn mobile-rtl-btn" title="Toggle RTL"><i
+                            class="fas fa-exchange-alt"></i></button>
+                </div>
+
+                <!-- Sign Up inside mobile menu (after icons) -->
+                <a href="signup.html" class="btn btn-primary nav-menu-signup" id="nav-menu-signup-btn">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="control-btn nav-control-btn" id="theme-toggle-btn" title="Toggle Theme"><i
+                        class="fas fa-moon"></i></button>
+                <button class="control-btn nav-control-btn" id="rtl-toggle-btn" title="Toggle RTL"><i
+                        class="fas fa-exchange-alt"></i></button>
+                <a href="signup.html" class="btn btn-primary btn-sm" id="nav-signup-btn">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1920&q=80"
+                alt="Sustainable Wind Farm and Ecosystem">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content fade-in appear">
+                <span class="hero-tagline"><i class="fas fa-seedling"></i> Scientific Assessment & Compliance</span>
+                <h1>Environmental Impact Assessments For Sustainable Project Development</h1>
+                <p class="hero-desc">Helping construction, mining, infrastructure, and industrial developers achieve
+                    environmental compliance while protecting ecosystems and communities.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary" id="hero-request-btn"><i
+                            class="fas fa-clipboard-check"></i> Request Assessment</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Agency Section -->
+    <section class="about-section" id="about-agency">
+        <div class="container">
+            <div class="about-summary">
+                <div class="about-graphics fade-in">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80"
+                        alt="Environmental Monitoring Fieldwork" class="main-graphic">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80"
+                        alt="Environmental restoration" class="sub-graphic">
+                    <div class="experience-badge">
+                        <span class="years">25+</span>
+                        <span class="text">Years of<br>Expertise</span>
+                    </div>
+                </div>
+
+                <div class="about-details fade-in">
+                    <span class="section-tag">About Envit Agency</span>
+                    <h2 class="section-title">Enabling Sustainable Infrastructure Through Science</h2>
+                    <p>Envit Environmental Impact Assessment Agency is a premier scientific advisory firm. We bridge the
+                        gap between capital development projects and ecological conservation by conducting meticulous
+                        assessments and designing robust compliance blueprints.</p>
+                    <p>With an interdisciplinary team of biologists, geologists, environmental engineers, and regulatory
+                        specialists, we deliver defensible research and strategic mitigation plans that secure
+                        regulatory approvals quickly and reliably.</p>
+
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Regulatory Science</h4>
+                                <p>Rigorous empirical field research backed by certified laboratories.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Mitigation Experts</h4>
+                                <p>Designing practical engineering solutions for ecosystem protection.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EIA Methodology Section -->
+    <section class="section-alt" id="eia-methodology">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">EIA Methodology</span>
+                <h2 class="section-title">Our Scientific Assessment Process</h2>
+                <p class="section-subtitle">We follow a structured, internationally recognized, and government-approved
+                    6-step environmental framework to secure project approvals.</p>
+            </div>
+
+            <div class="methodology-flow fade-in">
+                <div class="methodology-step">
+                    <div class="step-number">01</div>
+                    <h4>Screening</h4>
+                    <p>Initial analysis to determine if an EIA is required under local legislative frameworks.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">02</div>
+                    <h4>Scoping</h4>
+                    <p>Defining the boundaries, key concerns, and focus areas of the environmental study.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">03</div>
+                    <h4>Baseline Study</h4>
+                    <p>Measuring biological, air, water, soil, and socio-economic conditions prior to project start.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">04</div>
+                    <h4>Impact Analysis</h4>
+                    <p>Predicting the magnitude and significance of potential environmental disruptions.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">05</div>
+                    <h4>Mitigation</h4>
+                    <p>Developing avoidance, minimization, and offset plans to counter negative effects.</p>
+                </div>
+                <div class="methodology-step">
+                    <div class="step-number">06</div>
+                    <h4>Submission</h4>
+                    <p>Assembling the final EIA documentation for government review and public consultation.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3.5rem;" class="fade-in">
+                <a href="methodology.html" class="btn btn-primary" id="methodology-readmore-btn"><i
+                        class="fas fa-arrow-right"></i> Explore Our Framework Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sector Expertise Section -->
+    <section class="sector-expertise" id="sector-expertise">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Sector Expertise</span>
+                <h2 class="section-title">Sectors We Serve</h2>
+                <p class="section-subtitle">Delivering bespoke environmental advisory solutions for large-scale
+                    development and capital projects across key industrial segments.</p>
+            </div>
+
+            <!-- Tabbed sector selector -->
+            <div class="sector-nav fade-in" id="sector-tabs-container">
+                <button class="sector-tab active" data-target="construction" id="tab-btn-construction"><i
+                        class="fas fa-building"></i> Construction</button>
+                <button class="sector-tab" data-target="mining" id="tab-btn-mining"><i class="fas fa-mountain"></i>
+                    Mining</button>
+                <button class="sector-tab" data-target="infrastructure" id="tab-btn-infrastructure"><i
+                        class="fas fa-road"></i> Infrastructure</button>
+                <button class="sector-tab" data-target="energy" id="tab-btn-energy"><i class="fas fa-wind"></i>
+                    Renewable Energy</button>
+                <button class="sector-tab" data-target="industrial" id="tab-btn-industrial"><i
+                        class="fas fa-industry"></i> Industrial</button>
+                <button class="sector-tab" data-target="urban" id="tab-btn-urban"><i class="fas fa-city"></i> Urban
+                    Expansion</button>
+            </div>
+
+            <!-- Tab contents -->
+            <div class="sector-contents-container fade-in">
+                <!-- Construction -->
+                <div class="sector-tab-content active" id="construction">
+                    <div class="sector-content-text">
+                        <h3>Sustainable Property Development</h3>
+                        <p>We provide full-spectrum environmental surveys and construction permits for commercial,
+                            residential, and institutional builders. Our priority is ensuring soil retention, acoustic
+                            protection, and water drainage efficiency.</p>
+                        <ul class="sector-bullet-list">
+                            <li><i class="fas fa-check"></i> Construction compliance audits & risk maps</li>
+                            <li><i class="fas fa-check"></i> Soil erosion control and storm water drainage plans</li>
+                            <li><i class="fas fa-check"></i> Urban biological corridor preservation assessments</li>
+                        </ul>
+                        <a href="sectors.html" class="btn btn-outline" id="construction-details-btn">Learn More</a>
+                    </div>
+                    <div class="sector-content-img">
+                        <img src="assets/images/development.jpg" alt="Sustainable Construction Project">
+                    </div>
+                </div>
+
+                <!-- Mining -->
+                <div class="sector-tab-content" id="mining">
+                    <div class="sector-content-text">
+                        <h3>Resource Extraction Compliance</h3>
+                        <p>Navigating the strict environmental standards of mineral and resource mining. We deliver
+                            scientific analyses of tailing ponds, groundwater run-off, air particles, and long-term land
+                            reclamation schedules.</p>
+                        <ul class="sector-bullet-list">
+                            <li><i class="fas fa-check"></i> Hydrogeological baseline profiling & water monitoring</li>
+                            <li><i class="fas fa-check"></i> Mine closure and landscape ecological restoration</li>
+                            <li><i class="fas fa-check"></i> Environmental monitoring systems (EMS) implementation</li>
+                        </ul>
+                        <a href="sectors.html" class="btn btn-outline" id="mining-details-btn">Learn More</a>
+                    </div>
+                    <div class="sector-content-img">
+                        <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80"
+                            alt="Mining Site Assessment">
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="sector-tab-content" id="infrastructure">
+                    <div class="sector-content-text">
+                        <h3>Highways, Rails & Public Transit</h3>
+                        <p>Conducting massive regional scale EIAs for transport corridors. We assess large-scale
+                            ecosystem fragmentation, structural noise pollution, and community resettlement safeguards.
+                        </p>
+                        <ul class="sector-bullet-list">
+                            <li><i class="fas fa-check"></i> Linear corridor fragmentation studies</li>
+                            <li><i class="fas fa-check"></i> Noise, vibration, and dust mitigation systems</li>
+                            <li><i class="fas fa-check"></i> Multi-stakeholder community consultation forums</li>
+                        </ul>
+                        <a href="sectors.html" class="btn btn-outline" id="infrastructure-details-btn">Learn More</a>
+                    </div>
+                    <div class="sector-content-img">
+                        <img src="assets/images/pilbara.jpg" alt="High-Speed Infrastructure Corridor">
+                    </div>
+                </div>
+
+                <!-- Renewable Energy -->
+                <div class="sector-tab-content" id="energy">
+                    <div class="sector-content-text">
+                        <h3>Wind, Solar & Hydro Assessment</h3>
+                        <p>Though clean in output, green energy setups demand rigorous biodiversity checks, including
+                            migratory bird trajectory tracking and aquatic habitat thermal measurements.</p>
+                        <ul class="sector-bullet-list">
+                            <li><i class="fas fa-check"></i> Bird and bat mortality risk modeling for wind farms</li>
+                            <li><i class="fas fa-check"></i> Streamflow dynamics and aquatic habitat protection</li>
+                            <li><i class="fas fa-check"></i> Carbon reduction credit calculation & tracking</li>
+                        </ul>
+                        <a href="sectors.html" class="btn btn-outline" id="energy-details-btn">Learn More</a>
+                    </div>
+                    <div class="sector-content-img">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80"
+                            alt="Solar Farm Development">
+                    </div>
+                </div>
+
+                <!-- Industrial -->
+                <div class="sector-tab-content" id="industrial">
+                    <div class="sector-content-text">
+                        <h3>Chemical, Refining & Manufacturing</h3>
+                        <p>Managing air emission modelling, sound contour mapping, hazardous chemical waste management,
+                            and thermal heat discharge analysis for heavy manufacturing developments.</p>
+                        <ul class="sector-bullet-list">
+                            <li><i class="fas fa-check"></i> Air dispersion modeling (AERMOD)</li>
+                            <li><i class="fas fa-check"></i> Soil contamination assessments (Phase I & II ESA)</li>
+                            <li><i class="fas fa-check"></i> Industrial waste disposal permitting</li>
+                        </ul>
+                        <a href="sectors.html" class="btn btn-outline" id="industrial-details-btn">Learn More</a>
+                    </div>
+                    <div class="sector-content-img">
+                        <img src="https://images.unsplash.com/photo-1535732820275-9ffd998cac22?auto=format&fit=crop&w=600&q=80"
+                            alt="Industrial Processing Plant">
+                    </div>
+                </div>
+
+                <!-- Urban Expansion -->
+                <div class="sector-tab-content" id="urban">
+                    <div class="sector-content-text">
+                        <h3>Smart City Master Planning</h3>
+                        <p>Structuring broad strategic assessments for municipal rezoning. We inspect urban heat
+                            islands, aquifer charging barriers, traffic emissions, and waste infrastructure bounds.</p>
+                        <ul class="sector-bullet-list">
+                            <li><i class="fas fa-check"></i> Strategic Environmental Assessments (SEA)</li>
+                            <li><i class="fas fa-check"></i> Green canopy modeling and tree preservation</li>
+                            <li><i class="fas fa-check"></i> Drainage load simulation and run-off compliance</li>
+                        </ul>
+                        <a href="sectors.html" class="btn btn-outline" id="urban-details-btn">Learn More</a>
+                    </div>
+                    <div class="sector-content-img">
+                        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=600&q=80"
+                            alt="Urban Skyline and Smart City Layout">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Stats Section -->
+    <section class="section-alt" id="why-choose-us">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-text-content fade-in">
+                    <span class="section-tag">Why Choose Envit</span>
+                    <h2 class="section-title">The Scientific Standard In Environmental Approvals</h2>
+                    <p>We pride ourselves on providing defensible environmental data that stands up to regulatory
+                        scrutiny. Developers trust us because we don't just point out ecological blockers—we actively
+                        engineer the solutions to bypass them without compromising conservation.</p>
+                    <p>With localized legal knowledge and robust scientific tools, we accelerate the timeline between
+                        field assessment and capital deployment.</p>
+                    <a href="about.html" class="btn btn-primary" id="why-about-btn">Our Credentials</a>
+                </div>
+
+                <div class="stats-grid fade-in">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="450">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="99">0%</div>
+                        <div class="stat-label">Approval Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="38">0</div>
+                        <div class="stat-label">Environmental Specialists</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects" id="featured-projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Featured Projects</span>
+                <h2 class="section-title">Our Environmental Success Stories</h2>
+                <p class="section-subtitle">Exploring how Envit balances development ambitions with sound biological,
+                    atmospheric, and ecological management practices.</p>
+            </div>
+
+            <!-- Custom Centered Odd Flex Grid -->
+            <div class="card-grid fade-in">
+                <!-- Project 1 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
+                            alt="Wind Farm Infrastructure Development" class="card-img">
+                        <span class="card-tag">Renewable Energy</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> California, USA</span>
+                        </div>
+                        <h3 class="card-title"><a href="project-details.html">Sierra Nevada Wind Infrastructure
+                                Assessment</a></h3>
+                        <p class="card-text">Comprehensive EIA for a 200MW wind generator field, detailing migratory
+                            bird protection measures, soil retention plans, and acoustic dispersion grids.</p>
+                        <div
+                            style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.82rem;">
+                            <strong>Outcome:</strong> Fast-tracked state permit approval with complete eco-safeguards.
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-1">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/images/pilbara.jpg" alt="Ecological Mining Audit" class="card-img">
+                        <span class="card-tag">Mining</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Western Australia</span>
+                        </div>
+                        <h3 class="card-title"><a href="project-details.html">Pilbara Iron Ore Excavation EIA</a></h3>
+                        <p class="card-text">Deep hydrogeological mapping and biodiversity baseline surveys to protect
+                            subterranean aquifers and fragile desert ecosystems during mining development.</p>
+                        <div
+                            style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.82rem;">
+                            <strong>Outcome:</strong> Groundwater filtration monitoring systems active and compliant.
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-2">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/images/forest.jpg" alt=" Eco-bridge construction" class="card-img">
+                        <span class="card-tag">Infrastructure</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Bavaria, Germany</span>
+                        </div>
+                        <h3 class="card-title"><a href="project-details.html">Bavarian Forest Infrastructure
+                                Alignment</a></h3>
+                        <p class="card-text">Designing wildlife wildlife-crossings and acoustic dampers for a major
+                            transit corridor to minimize biological blockages and sound pollution.</p>
+                        <div
+                            style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.82rem;">
+                            <strong>Outcome:</strong> Over 94% mammal migration continuity rating maintained.
+                        </div>
+                        <a href="project-details.html" class="card-link" style="margin-top: 1.5rem;"
+                            id="project-link-3">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div style="text-align: center; margin-top: 3.5rem;" class="fade-in">
+                <a href="projects.html" class="btn btn-outline" id="projects-viewall-btn"><i class="fas fa-th"></i> View
+                    All Agency Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Section: Regulatory Compliance & Sustainability Commitment -->
+    <section class="section-alt" id="compliance-sustainability">
+        <div class="container">
+            <div class="split-sections-container">
+                <!-- Regulatory Compliance -->
+                <div class="compliance-column fade-in">
+                    <span class="section-tag">Audit & Controls</span>
+                    <h2 class="section-title" style="font-size: 2rem;">Regulatory Compliance</h2>
+                    <p>Securing project authorization demands systematic compliance audits. We navigate local, national,
+                        and international standards, supplying defensive data structures to bypass permit blocks.</p>
+
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <div class="feature-icon-box"><i class="fas fa-balance-scale"></i></div>
+                            <div class="feature-card-content">
+                                <h4>Government Approvals</h4>
+                                <p>Managing federal and state environmental approvals smoothly.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-box"><i class="fas fa-file-signature"></i></div>
+                            <div class="feature-card-content">
+                                <h4>Environmental Permits</h4>
+                                <p>Acquiring water discharge, air emission, and noise permits.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-box"><i class="fas fa-binoculars"></i></div>
+                            <div class="feature-card-content">
+                                <h4>Compliance Monitoring</h4>
+                                <p>Scheduled audits during construction to verify policy limits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sustainability Commitment -->
+                <div class="sustainability-column fade-in">
+                    <span class="section-tag">Ecological Balance</span>
+                    <h2 class="section-title" style="font-size: 2rem;">Sustainability Commitment</h2>
+                    <p>Every development has an ecological footprint. We believe in designing projects that leave a net
+                        positive impact, using biological restoration mechanisms, offset systems, and biodiversity
+                        grids.</p>
+
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <div class="feature-icon-box"><i class="fas fa-tree"></i></div>
+                            <div class="feature-card-content">
+                                <h4>Biodiversity Protection</h4>
+                                <p>Constructing biological bridges and preserving critical habitats.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-box"><i class="fas fa-hands-helping"></i></div>
+                            <div class="feature-card-content">
+                                <h4>Community Engagement</h4>
+                                <p>Facilitating public hearings and mitigating local community.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-box"><i class="fas fa-globe-americas"></i></div>
+                            <div class="feature-card-content">
+                                <h4>Environmental Stewardship</h4>
+                                <p>Carbon mapping and offset planning to neutralize.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Development Clients Say</h2>
+                <p class="section-subtitle">Hear from general contractors, mining directors, and infrastructure planners
+                    who secured project starts via Envit's environmental planning.</p>
+            </div>
+
+            <div class="testimonial-carousel fade-in">
+                <div class="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"Envit's rapid deployment of hydrogeologists and biodiversity
+                            experts allowed us to secure our West Coast infrastructure expansion approvals 4 months
+                            ahead of schedule. Their data was airtight under state council examination."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                                alt="Marcus Vance" class="author-img">
+                            <div class="author-details">
+                                <div class="author-name">Marcus Vance</div>
+                                <div class="author-role">Director of Infrastructure, Apex Holdings</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"Mining in sensitive biological areas requires extreme regulatory
+                            accuracy. Envit built our Environmental Management Plan and groundwater monitoring loop with
+                            absolute precision. High recommend their consulting services."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+                                alt="David Sterling" class="author-img">
+                            <div class="author-details">
+                                <div class="author-name">David Sterling</div>
+                                <div class="author-role">VP of Operations, Sterling Copper Corp</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"We faced significant community pushback regarding acoustic impacts
+                            for our manufacturing facility. Envit mapped the noise dispersal and designed a beautiful
+                            buffer wood that satisfied both neighbors and regulators."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80"
+                                alt="Elena Rostova" class="author-img">
+                            <div class="author-details">
+                                <div class="author-name">Elena Rostova</div>
+                                <div class="author-role">Chief Engineering Officer, Veloce Logistics</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="call-to-action">
+        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1920&q=80"
+            alt="Green bridge forest canopy" class="cta-bg">
+        <div class="cta-container container fade-in">
+            <h2 class="cta-title">Need Environmental Approval For Your Next Project?</h2>
+            <p class="cta-desc">Partner with Envit to manage field assessments, compile your EIA files, and secure
+                regulatory permits smoothly. Get an overview from our consulting engineers today.</p>
+            <a href="contact.html" class="btn btn-white btn-lg" id="cta-action-btn"><i
+                    class="fas fa-clipboard-list"></i> Request Project Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;" id="footer-logo">
+                        <div class="logo-icon" style="background-color: var(--color-primary); color: #ffffff;"><i
+                                class="fas fa-leaf"></i></div>
+                        <div class="logo-text" style="color: #ffffff;">ENVIT<span>AGENCY</span></div>
+                    </a>
+                    <p style="margin-top: 1rem;">Providing scientific assessments, biodiversity audits, and
+                        environmental planning tools to assist global builders in maintaining legal and ecological
+                        balance.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-widget">
+                    <h4>Core Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Environmental Impact Assessment</a></li>
+                        <li><a href="services.html">Environmental Due Diligence</a></li>
+                        <li><a href="services.html">Mining Site Assessment</a></li>
+                        <li><a href="services.html">Construction Compliance</a></li>
+                        <li><a href="services.html">Air Quality & Water Surveys</a></li>
+                        <li><a href="services.html">Biodiversity Audits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4>Sectors Served</h4>
+                    <ul class="footer-links">
+                        <li><a href="sectors.html">Property & Construction</a></li>
+                        <li><a href="sectors.html">Mining & Resource Extraction</a></li>
+                        <li><a href="sectors.html">Infrastructure & Highways</a></li>
+                        <li><a href="sectors.html">Renewable Wind & Solar</a></li>
+                        <li><a href="sectors.html">Industrial Facilities</a></li>
+                        <li><a href="sectors.html">Government Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4>HQ Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>404 Green Canopy Ave, Suite 100, Seattle, WA 98101, USA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+1 (800) 555-ENVIT (3684)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>assessment@envit-agency.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Environmental Impact Assessment Agency (Envit). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top-btn" class="scroll-top-btn" title="Scroll to Top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
