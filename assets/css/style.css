@@ -520,6 +520,12 @@ html[dir="rtl"] .nav-link::after {
     min-width: 320px;
 }
 
+.card-grid>:nth-child(3n+1):nth-last-child(1),
+.card-grid>:nth-child(3n+2):nth-last-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .card {
     background-color: var(--surface);
     border: 1px solid var(--border-color);
@@ -687,6 +693,8 @@ html[dir="rtl"] .card-link:hover i {
 .hero-content {
     max-width: 720px;
     z-index: 10;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -719,6 +727,7 @@ html[dir="rtl"] .card-link:hover i {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Home 2 Hero: Split Layout */
@@ -949,13 +958,19 @@ html[dir="rtl"] .experience-badge {
 
 .methodology-step h4 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-weight: var(--weight-h4);
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
 }
 
 .methodology-step p {
     font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.55;
+    margin-bottom: 0;
 }
 
 /* Sector Expertise Tabs */
@@ -1551,6 +1566,12 @@ html[dir="rtl"] .breadcrumb i {
     font-size: 1.4rem;
     font-weight: var(--weight-h3);
     margin-bottom: 1rem;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-break: break-word;
 }
 
 .mission-card p {
@@ -1647,6 +1668,10 @@ html[dir="rtl"] .breadcrumb i {
     font-size: 1.2rem;
     margin-bottom: 0.25rem;
     font-weight: var(--weight-h3);
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-role {
@@ -1736,6 +1761,7 @@ html[dir="rtl"] .breadcrumb i {
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
+    padding-top: 1rem;
 }
 
 .timeline-line {
@@ -2171,17 +2197,50 @@ html[dir="rtl"] .project-challenges-box {
     justify-content: center;
     font-size: 1.25rem;
     flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+html[dir="rtl"] .contact-info-card {
+    flex-direction: row-reverse;
 }
 
 .contact-info-card h4 {
     font-size: 1.1rem;
     margin-bottom: 0.35rem;
     font-weight: var(--weight-h4);
+    line-height: 1.4;
+    min-height: 1.6rem;
+}
+
+/* Fix 5: Contact page – uniform alignment for address/phone/email content */
+.contact-info-card {
+    align-items: flex-start;
+}
+
+.contact-info-card>div {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-info-card>div p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+html[dir="rtl"] .contact-info-card>div {
+    text-align: right;
+}
+
+html[dir="ltr"] .contact-info-card>div {
+    text-align: left;
 }
 
 .contact-info-card p {
     font-size: 0.95rem;
     margin-bottom: 0;
+    line-height: 1.5;
+    color: var(--text-secondary);
 }
 
 /* Form Styles */
@@ -2310,6 +2369,19 @@ html[dir="rtl"] .project-challenges-box {
 .office-card p {
     font-size: 0.9rem;
     margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: start;
+    line-height: 1.5;
+}
+
+.office-card p i {
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    width: 1em;
+    text-align: center;
 }
 
 /* SVG Map simulation container */
@@ -2403,7 +2475,39 @@ html[dir="rtl"] .project-challenges-box {
         font-size: 2rem;
     }
 
-    .about-summary,
+    /* Fix 3 (deep): Force all fade-in elements visible at ≤1024px.
+       The IntersectionObserver uses threshold:0.15 + rootMargin -50px,
+       which can silently fail to trigger for deeply-nested timeline items
+       at exactly 1024px viewport. CSS override guarantees visibility. */
+    .fade-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition: none !important;
+    }
+
+    /* Fix 2: About Envit Agency — stack image full-width, content below */
+    .about-summary {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    .about-summary .about-graphics {
+        width: 100%;
+        /* sub-graphic is position:absolute bottom:-3rem — give room so it doesn't overlap next section */
+        padding-bottom: 5rem;
+    }
+
+    .about-summary .about-graphics .main-graphic {
+        width: 100% !important;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* sub-graphic and experience-badge keep exact desktop styles — no changes */
+
+    .about-summary .about-details {
+        width: 100%;
+    }
+
     .sector-tab-content,
     .why-grid,
     .split-sections-container,
@@ -2412,6 +2516,21 @@ html[dir="rtl"] .project-challenges-box {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .sector-tab-content {
+        justify-items: center;
+        align-items: center;
+    }
+
+    .sector-content-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sector-content-img {
+        width: 100%;
+        max-width: 100%;
     }
 
     .sector-detail-grid {
@@ -2445,6 +2564,7 @@ html[dir="rtl"] .project-challenges-box {
         flex: 0 1 calc(50% - 0.75rem);
     }
 
+    /* Fix 1: Methodology page 1024px - timeline stacks properly */
     .timeline-line {
         left: 20px;
     }
@@ -2456,11 +2576,13 @@ html[dir="rtl"] .project-challenges-box {
 
     .timeline-dot {
         left: 20px;
+        transform: translateX(-50%);
     }
 
     html[dir="rtl"] .timeline-dot {
         left: auto;
         right: 20px;
+        transform: translateX(50%);
     }
 
     .timeline-item,
@@ -2468,18 +2590,33 @@ html[dir="rtl"] .project-challenges-box {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
+        margin-bottom: 3rem;
     }
 
     .timeline-content,
     .timeline-img-box {
-        width: calc(100% - 40px);
-        margin-left: 40px;
+        width: calc(100% - 50px);
+        margin-left: 50px;
+        margin-right: 0;
     }
 
     html[dir="rtl"] .timeline-content,
     html[dir="rtl"] .timeline-img-box {
         margin-left: 0;
-        margin-right: 40px;
+        margin-right: 50px;
+    }
+
+    .timeline-container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .methodology-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .methodology-flow::before {
+        display: block;
     }
 
     .footer-grid {
@@ -2542,6 +2679,21 @@ html[dir="rtl"] .project-challenges-box {
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.25rem;
+    }
+
+    .page-banner h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .page-banner-content {
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    .page-banner.contact-page-banner p {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .hero-split-grid {
@@ -3075,9 +3227,10 @@ html[dir="rtl"] .auth-form .password-toggle-btn {
 }
 
 .standards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 
 .standard-card {
@@ -4005,6 +4158,16 @@ html[dir="rtl"] .case-card {
         font-size: 2rem !important;
         line-height: 1.25 !important;
     }
+
+    .hero-btns {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .hero-btns .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
 }
 
 /* 2. Site Sensor Feed: span and strong each take full width (stacked) */
@@ -4076,9 +4239,12 @@ body.nav-open {
         align-items: center;
         width: auto !important;
         margin: 1rem auto 0.5rem auto !important;
-        padding: 0.55rem 1.25rem !important; /* same as btn-sm */
-        font-size: 0.875rem !important; /* same as btn-sm */
-        border-radius: var(--radius-sm) !important; /* same as btn-sm */
+        padding: 0.55rem 1.25rem !important;
+        /* same as btn-sm */
+        font-size: 0.875rem !important;
+        /* same as btn-sm */
+        border-radius: var(--radius-sm) !important;
+        /* same as btn-sm */
         text-align: center;
     }
 }
@@ -4147,7 +4313,8 @@ html[dir="rtl"] .auth-controls-wrapper {
 /* ============================================================
    ERROR PAGE & COMING SOON PAGE
    ============================================================ */
-.error-page-wrapper, .coming-soon-wrapper {
+.error-page-wrapper,
+.coming-soon-wrapper {
     min-height: calc(100vh - var(--header-height) - 400px);
     display: flex;
     align-items: center;
@@ -4156,7 +4323,8 @@ html[dir="rtl"] .auth-controls-wrapper {
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
-.error-card, .coming-soon-card {
+.error-card,
+.coming-soon-card {
     background-color: var(--surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
@@ -4169,7 +4337,8 @@ html[dir="rtl"] .auth-controls-wrapper {
     animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.error-icon, .coming-soon-icon {
+.error-icon,
+.coming-soon-icon {
     font-size: 4rem;
     color: var(--color-primary);
     margin-bottom: 1.5rem;
@@ -4189,20 +4358,23 @@ html[dir="rtl"] .auth-controls-wrapper {
     -webkit-text-fill-color: transparent;
 }
 
-.error-title, .coming-soon-title {
+.error-title,
+.coming-soon-title {
     font-size: 2rem;
     font-weight: var(--weight-h2);
     margin-bottom: 1rem;
 }
 
-.error-desc, .coming-soon-desc {
+.error-desc,
+.coming-soon-desc {
     color: var(--text-secondary);
     font-size: 1.05rem;
     margin-bottom: 2.5rem;
     line-height: 1.6;
 }
 
-.error-actions, .coming-soon-actions {
+.error-actions,
+.coming-soon-actions {
     display: flex;
     gap: 1.25rem;
     justify-content: center;
@@ -4279,4 +4451,106 @@ html[dir="rtl"] .auth-controls-wrapper {
     .newsletter-form {
         flex-direction: column;
     }
+}
+
+/* ==========================================================================
+   BUG FIXES — Issues 2, 3, 4, 6 (cert cards), 7 (CTA cleanup)
+   ========================================================================== */
+
+/* Fix 2: Home2 — Regulatory Alignment standards-grid: center 3rd card when grid wraps */
+.standards-grid .standard-card {
+    flex: 1 1 280px;
+    max-width: 400px;
+}
+
+/* Fix 3: Home2 Mobile — CTA hero buttons equal full width */
+@media (max-width: 768px) {
+
+    .hero-split .hero-btns,
+    .hero-split-content .hero-btns {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    .hero-split .hero-btns .btn,
+    .hero-split-content .hero-btns .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+}
+
+/* Fix 4: Home1 Mobile — Sector tabs each show full width, one by one, same size */
+@media (max-width: 768px) {
+    .sector-nav {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+    }
+
+    .sector-tab {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0.85rem 1rem !important;
+        box-sizing: border-box;
+    }
+
+    .sector-tab-content.active {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    .sector-content-text,
+    .sector-tab-content .sector-content-img {
+        width: 100% !important;
+    }
+}
+
+/* Fix 6: About page — equal heading height in certification card grid */
+.certifications-grid .card h4 {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Fix 7: CTA Button Text Cleanup — remove any unwanted pseudo-content from BTN elements */
+.btn::before,
+.btn::after,
+.card-link::before,
+.card-link::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Ensure CTA button text is clean, no extra characters */
+.cta-section .btn,
+.hero-btns .btn,
+.why-text-content .btn,
+.methodology-flow~div .btn {
+    letter-spacing: normal;
+}
+
+/* Fix: Office card icon alignment in contact page global section */
+.office-card p {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.office-card p i {
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    width: 1em;
+    text-align: center;
 }
